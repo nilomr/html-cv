@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilo Merino Recalde - CV</title>
+    <!-- Add Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.5;
+            color: #2c2c2c;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            background: #fdfcfb;
+        }
+
+        .container {
+            background: white;
+            padding: 50px;
+            border: 1px solid #f0efed;
+        }
+
+        .header {
+            margin-bottom: 50px;
+            padding-top: 0;
+            padding-bottom: 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: none;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        .name {
+            font-size: 1.4em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #444;
+            margin-bottom: 0;
+            line-height: 1.05;
+            font-family: inherit;
+        }
+
+        .name-stack {
+            font-size: 1.15em;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #888;
+            margin-top: 0.5px;
+            line-height: 1.05;
+        }
+
+        .header-dots {
+            display: flex;
+            gap: 5px;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .header-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 20%;
+            display: inline-block;
+        }
+
+        .header-dot.blue {
+            background: #528ca6;
+        }
+
+        .header-dot.gold {
+            background: #b07b3c;
+        }
+
+        .header-dot.brown {
+            background: #a64e21;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            font-size: .9em;
+            color: #666;
+            font-weight: 400;
+            align-items: flex-start;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .contact-icon {
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #545454;
+            opacity: 0.75;
+        }
+
+        .contact-icon i {
+            font-size: 1em;
+            line-height: 1;
+            display: block;
+        }
+
+        .contact a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact a:hover {
+            color: #a66937;
+        }
+
+        /* Media logos row */
+        .media-logos {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-top: 14px;
+            margin-bottom: 2px;
+            flex-wrap: wrap;
+        }
+
+        .media-logos img {
+            height: 20px;
+            width: auto;
+            display: inline-block;
+            /* Removed filter, opacity, and transition for no transparency or hover effects */
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            position: relative;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e8e5e0;
+        }
+
+        .about {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            border-left: 2px solid #f5f3f0;
+        }
+
+        .item.featured {
+            border-left-color: #d4a574;
+            background: #fefcfa;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #1a1a1a;
+        }
+
+        .item-organization {
+            color: #c17b47;
+            font-weight: 500;
+            margin-top: 2px;
+            font-size: 0.95em;
+        }
+
+        .item-date {
+            color: #888;
+            font-weight: 500;
+            font-size: 0.9em;
+            white-space: nowrap;
+            background: #f8f6f3;
+            padding: 4px 12px;
+        }
+
+        .item-description {
+            color: #555;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        .item-description ul {
+            margin-left: 18px;
+            margin-top: 8px;
+        }
+
+        .item-description li {
+            margin-bottom: 6px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-group {
+            background: #faf9f7;
+            padding: 20px;
+            border-left: 3px solid #d4a574;
+        }
+
+        .skill-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-size: 1em;
+        }
+
+        .skill-items {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        .publications-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .publication {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0efed;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .publication-authors {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 4px;
+        }
+
+        .publication-title {
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        .publication-venue {
+            color: #c17b47;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .talks-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .talk {
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f3f0;
+        }
+
+        .talk:last-child {
+            border-bottom: none;
+        }
+
+        .talk-title {
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+            font-size: 0.95em;
+        }
+
+        .talk-details {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 15px 30px;
+            align-items: center;
+        }
+
+        .award-title {
+            font-weight: 500;
+            color: #1a1a1a;
+            font-size: 0.95em;
+        }
+
+        .award-year {
+            color: #c17b47;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .languages-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .language-item {
+            text-align: center;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .language-level {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            background: none;
+            color: #a66937;
+            padding: 4px 8px;
+            font-weight: 500;
+            font-size: 0.97em;
+            border-radius: 0px;
+            border: none;
+            transition: color 0.2s, background 0.2s;
+            box-shadow: none;
+            margin-bottom: 0;
+            text-decoration: none;
+        }
+
+        .portfolio-link:hover {
+            color: #c17b47;
+            background: #f8f6f3;
+        }
+
+        .portfolio-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .portfolio-link-box {
+            background: #f8f6f3;
+            color: #7a6a53;
+            border-radius: 0px;
+            border: none;
+            padding: 4px 12px;
+            font-size: 0.89em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: none;
+            margin-bottom: 0;
+            outline: none;
+            line-height: 1.2;
+        }
+
+        .portfolio-link-box:hover {
+            background: #f3ede6;
+            color: #a66937;
+        }
+
+        .visual-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .showcase-item {
+            background: none;
+            padding: 0;
+            text-align: center;
+            border: none;
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0px;
+            display: block;
+            margin-bottom: 8px;
+            box-shadow: none;
+            border: none;
+            image-rendering: auto;
+        }
+
+        .showcase-placeholder {
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e5e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            color: #999;
+            font-size: 0.95em;
+            font-style: italic;
+            border-radius: 6px;
+        }
+
+        .showcase-caption {
+            font-size: 0.82em;
+            color: #888;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        .highlight-box {
+            background: #fefcfa;
+            border: 1px solid #f0efed;
+            border-left: 4px solid #d4a574;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h3 {
+            color: #1a1a1a;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .highlight-box p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .container {
+                padding: 30px 25px;
+            }
+
+            .name {
+                font-size: 2.5em;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .visual-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .languages-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: left;
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .award-year {
+                text-align: left;
+                margin-top: 4px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                max-width: none;
+                margin: 0;
+                padding: 15px;
+                font-size: 11px;
+            }
+
+            .container {
+                border: none;
+                padding: 0;
+            }
+
+            .section {
+                margin-bottom: 30px;
+            }
+
+            .portfolio-link {
+                background: transparent;
+                color: #d4a574;
+                border: 1px solid #d4a574;
+            }
+
+            .visual-showcase {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <span class="name">NILO</span>
+                <div class="name-stack">MERINO<br>RECALDE</div>
+                <div class="header-dots">
+                    <span class="header-dot blue"></span>
+                    <span class="header-dot gold"></span>
+                    <span class="header-dot brown"></span>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="contact-row">
+                    <span class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <span>+44 776 056 6319</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <a href="mailto:info@nilomr.com">info@nilomr.com</a>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </span>
+                    <a href="https://nilomr.github.io" target="_blank">nilomr.github.io</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about">
+                    I'm a researcher, programmer, and designer from Northern Spain with a background in visual arts,
+                    anthropology, and biology. I began my career as a freelance nature photographer and cinematographer,
+                    before earning a BSc in Anthropology at Durham University and a PhD in Biology at the University of
+                    Oxford. I'm currently a researcher at Oxford, working at the intersection of ecology,
+                    data science, and visual communication.
+
+                    I specialise in designing and managing large-scale, data-driven projects, with hands-on experience
+                    in biodiversity monitoring, bioacoustics, machine learning, statistics, and high-performance
+                    computing. I'm passionate about open science, human and animal cultural diversity, and building
+                    tools that make complex ecological data accessible and engaging.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="item featured">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Postdoctoral Researcher</div>
+                            <div class="item-organization">University of Oxford</div>
+                        </div>
+                        <div class="item-date">Mar 2024 – Present</div>
+                    </div>
+                    <div class="item-description">
+                        I develop and deploy sensor and deep learning systems to quantify changes in bird and bat
+                        diversity across time and space, advise on ecological research projects, and teach statistics, AI and
+                        programming courses. Working with geospatial data, acoustics, computer vision, and cloud
+                        computing platforms.
+                    </div>
+                </div>
+
+                <div class="item featured">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Data Visualization Consultant</div>
+                            <div class="item-organization">Cornell Lab of Ornithology</div>
+                        </div>
+                        <div class="item-date">Jan 2025 – Present</div>
+                    </div>
+                    <div class="item-description">
+                        I'm developing interactive data visualizations using Svelte, D3.js, Three.js,
+                        TypeScript, HTML, and CSS, for ornithological
+                        research and public engagement with ecological data in
+                        museum contexts.
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Student Tutor & Guest Lecturer</div>
+                            <div class="item-organization">University of Oxford</div>
+                        </div>
+                        <div class="item-date">Oct 2022 – Present</div>
+                    </div>
+                    <div class="item-description">
+                        I teach and supervise across several programmes,
+                        focusing on ecology and bioacoustics, programming,
+                        statistics, and evolutionary biology. I mentor undergraduate and master's
+                        students, supervise programming projects for first-year PhD students at the Doctoral
+                        Training Centre (UKRI), and deliver training on version control, high-performance computing,
+                        and reproducible research.
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Doctoral Researcher</div>
+                            <div class="item-organization">University of Oxford</div>
+                        </div>
+                        <div class="item-date">Oct 2019 – Oct 2023</div>
+                    </div>
+                    <div class="item-description">
+                        Developed new computational methods for bioacoustic analysis and studied cultural evolution in
+                        bird songs. Specialized in behavioural ecology, computational biology, scientific communication,
+                        and quantitative research using deep learning approaches
+                        and spatially explicit Bayesian models.
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Second Unit Director & Cinematographer</div>
+                            <div class="item-organization">Dubai Films LLC | Awaken</div>
+                        </div>
+                        <div class="item-date">2012 – 2017</div>
+                    </div>
+                    <div class="item-description">
+                        Coordinated and directed international film units (4-10 people) on location in Ukraine,
+                        Belarus,
+                        Romania, Mongolia, UK, Spain, Sweden, Norway, UAE. Specialized in wildlife cinematography,
+                        high-speed cinematography, and project coordination in challenging environments.
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Camera and Jib Operator, Assistant Camera</div>
+                            <div class="item-organization">Voyage of Time: IMAX (Malick 2016)</div>
+                        </div>
+                        <div class="item-date">2011 – 2012</div>
+                    </div>
+                    <div class="item-description">
+                        US unit (California, Wyoming, Montana)
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px;">
+                    <h2 class="section-title" style="margin-bottom: 0;">Portfolio Highlights</h2>
+                    <div class="portfolio-actions" style="align-items: baseline;">
+                        <a href="https://nilomr.github.io/#data-viz" target="_blank"
+                            class="portfolio-link portfolio-link-box">
+                            View data visualization portfolio
+                        </a>
+                        <a href="https://github.com/nilomr" target="_blank" class="portfolio-link portfolio-link-box">
+                            <i class="fab fa-github" style="margin-right: 7px;"></i>View GitHub profile
+                        </a>
+                    </div>
+                </div>
+                <div class="visual-showcase">
+                    <div class="showcase-item">
+                        <img src="static/gallery-2.jpg" alt="Canopy App Screenshot">
+                        <div class="showcase-caption">Insights from large-scale biodiversity data. University of Oxford.
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="static/dashboard.png" alt="Canopy App Screenshot">
+                        <div class="showcase-caption">Interactive 3D dashboard for real-time
+                            bioacoustic monitoring. Cornell University.</div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="https://raw.githubusercontent.com/nilomr/canopy.app/refs/heads/main/static/canopy-mock-small.jpg"
+                            alt="Canopy App Screenshot">
+                        <div class="showcase-caption">
+                            ML model & app for classifying tree species
+                            from drone data. University of Oxford.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Core Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <div class="skill-title">Programming & Data Science</div>
+                        <div class="skill-items">
+                            <strong>Python</strong> (NumPy, SciPy, pandas, PyTorch)<br>
+                            <strong>R, LaTeX, bash, Git</strong><br>
+                            <strong>JavaScript, TypeScript, HTML, CSS</strong><br>
+                            <strong>Svelte, D3.js, Three.js</strong><br>
+                            Bayesian modeling, time series, computer vision
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-title">Computing & Infrastructure</div>
+                        <div class="skill-items">
+                            <strong>HPC & Cloud Computing</strong> (5+ years)<br>
+                            <strong>AWS, parallel programming</strong><br>
+                            <strong>Unix/Linux systems</strong><br>
+                            Large dataset curation (>10TB)<br>
+                            Multi-node GPU training
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-title">Design & Visualization</div>
+                        <div class="skill-items">
+                            <strong>Data visualization & scientific illustration</strong><br>
+                            <strong>Adobe Creative Suite, Figma</strong><br>
+                            <strong>Blender, QGIS</strong><br>
+                            Wildlife & high-speed cinematography<br>
+                            Modern web interfaces
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-title">Research & Communication</div>
+                        <div class="skill-items">
+                            <strong>Bioacoustics & behavioral ecology</strong><br>
+                            <strong>Teaching & mentoring</strong><br>
+                            <strong>Project leadership</strong><br>
+                            Population monitoring, bird ringing<br>
+                            Scientific writing & presentations
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+
+                <div class="item featured">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Doctor of Philosophy in Biology</div>
+                            <div class="item-organization">University of Oxford,
+                                UK</div>
+                        </div>
+                        <div class="item-date">2019 – 2023</div>
+                    </div>
+                    <div class="item-description">
+                        I developed new computational methods for bioacoustic analysis and studied how cultural
+                        stability and diversity in bird songs depends on social, demographic, and spatial factors.
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">BSc in Anthropology (First-Class Honours)</div>
+                            <div class="item-organization">Durham University, UK</div>
+                        </div>
+                        <div class="item-date">2016 – 2019</div>
+                    </div>
+                    <div class="item-description">
+                        Completed coursework in evolutionary anthropology, human and animal cultural diversity,
+                        archaeology, human evolution, and the psychology of perception. Participated in research
+                        projects exploring cultural variation in music and visual art.
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bacc. in Visual Arts</div>
+                            <div class="item-organization">IES M.G. Aragon, Spain</div>
+                        </div>
+                        <div class="item-date">2010 – 2012</div>
+                    </div>
+                    <div class="item-description">
+                        Studied illustration, painting, graphic design, video editing.
+                    </div>
+            </section>
+
+
+            <section class="section">
+                <h2 class="section-title">Key Publications</h2>
+                <div class="highlight-box">
+                    <h3>Recent Breakthrough</h3>
+                    <p><strong>The demographic drivers of cultural evolution in
+                            bird song</strong> - Published in Current Biology (2025),
+                        this work demonstrates how population demographics shape
+                        cultural transmission in wild populations, showing how
+                        acoustic monitoring can reveal population dynamics.</p>
+                    <div style="font-size: 0.8em; color: #888; margin-top: 10px; margin-bottom: 2px; font-weight: 500;">
+                        Featured in:
+                    </div>
+                    <div class="media-logos">
+                        <img src="static/bbc.svg" alt="BBC" />
+                        <img src="static/npr.svg" alt="NPR" />
+                        <img src="static/the-guardian.svg" alt="The Guardian" />
+                        <img src="static/oxford.svg" alt="Oxford University" />
+                        <img src="static/the-times.svg" alt="The Times" />
+                        <img src="static/the-washington-post.svg" alt="The Washington Post" />
+                    </div>
+                </div>
+                <div class="publications-grid">
+                    <div class="publication">
+                        <div class="publication-authors">N. Merino Recalde, A. Estandia, S.C. Keen, E.F. Cole, B.C.
+                            Sheldon</div>
+                        <div class="publication-title">The demographic drivers of cultural evolution in bird song</div>
+                        <div class="publication-venue">Current Biology, 35 1-10 (2025)</div>
+                    </div>
+
+                    <div class="publication">
+                        <div class="publication-authors">N. Merino Recalde, A. Estandia, L. Pichot, A. Vansse, E.F.
+                            Cole, B.C. Sheldon</div>
+                        <div class="publication-title">A densely sampled and richly annotated acoustic dataset from a
+                            wild bird population</div>
+                        <div class="publication-venue">Animal Behaviour, 211, 111-122 (2024)</div>
+                    </div>
+
+                    <div class="publication">
+                        <div class="publication-authors">N. Merino Recalde</div>
+                        <div class="publication-title">pykanto: A Python library to accelerate research on wild bird
+                            song</div>
+                        <div class="publication-venue">Methods in Ecology and Evolution, 14(8), 1994–2002 (2023)</div>
+                    </div>
+
+                    <div class="publication">
+                        <div class="publication-authors">A. Estandia, N. Merino Recalde, A.T. Sendell-Price, D.A.
+                            Potvin, W. Goulding, B.C. Robertson, S. Clegg</div>
+                        <div class="publication-title">Islands Promote Diversification of the Silvereye Species Complex:
+                            A Phylogenomic Analysis of a Great Speciator</div>
+                        <div class="publication-venue">Molecular Ecology (2025)</div>
+                    </div>
+
+                    <div class="publication">
+                        <div class="publication-authors">A. Estandia, N. Merino Recalde, J. Slate, B.C. Sheldon</div>
+                        <div class="publication-title">The genetic consequences of dispersal and immigration in a wild
+                            great tit population</div>
+                        <div class="publication-venue">bioRxiv (2025)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Selected Talks</h2>
+                <div class="talks-list">
+                    <div class="talk">
+                        <div class="talk-title">The demographic drivers of cultural evolution in bird song</div>
+                        <div class="talk-details">3rd Joint Congress on Evolutionary Biology, Montreal, Canada (2024)
+                        </div>
+                    </div>
+
+                    <div class="talk">
+                        <div class="talk-title">Guest lecture: Computational approaches to bioacoustics</div>
+                        <div class="talk-details">Cornell Lab of Ornithology, Cornell University (2024) - <a href="https://youtu.be/n0frgUKlhTQ" target="_blank" style="color: #c17b47; text-decoration: none;">Watch recording</a></div>
+                    </div>
+
+                    <div class="talk">
+                        <div class="talk-title">Guest lecture: Cultural evolution in bird song</div>
+                        <div class="talk-details">Max Planck Institute for Empirical Aesthetics, Frankfurt (2023)</div>
+                    </div>
+
+                    <div class="talk">
+                        <div class="talk-title">Cultural evolution in the wild:
+                        tracking the landscape of learning in bird song</div>
+                        <div class="talk-details">Congress of the European Society for Evolutionary Biology, Prague (2022);<br>Cultural Evolution Society Conference, Aarhus, Denmark (2022)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Awards & Recognition</h2>
+                <div class="awards-grid">
+                    <div class="award-title">Clarendon & Mary Frances Wagley Scholarship</div>
+                    <div class="award-year">2019</div>
+
+                    <div class="award-title">Edward Grey Institute Graduate Scholarship</div>
+                    <div class="award-year">2022</div>
+
+                    <div class="award-title">Best Poster - Oxford University Graduate Symposium</div>
+                    <div class="award-year">2022</div>
+
+                    <div class="award-title">Durham Undergraduate Research Scholarship</div>
+                    <div class="award-year">2018</div>
+
+                    <div class="award-title">V Astillero Video Art Contest - First Prize</div>
+                    <div class="award-year">2012</div>
+
+                    <div class="award-title">NHM Wildlife Photographer of the Year - Highly Commended</div>
+                    <div class="award-year">2008</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Languages</h2>
+                <ul class="languages-list" style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 6px;">
+                        <span style="font-weight: 500; color: #222; font-size: 1em;">Spanish</span>
+                        <span style="color: #aaa; font-size: 0.97em; margin-left: 10px;">Native</span>
+                    </li>
+                    <li style="margin-bottom: 6px;">
+                        <span style="font-weight: 500; color: #222; font-size: 1em;">English</span>
+                        <span style="color: #aaa; font-size: 0.97em; margin-left: 10px;">Full professional proficiency</span>
+                    </li>
+                    <li>
+                        <span style="font-weight: 500; color: #222; font-size: 1em;">Portuguese</span>
+                        <span style="color: #aaa; font-size: 0.97em; margin-left: 10px;">Basic</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
